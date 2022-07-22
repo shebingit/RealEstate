@@ -297,7 +297,7 @@
             </a>
           </li>
           <li>
-            <a href="{% url 'admin_propertyadd' %}">
+            <a href="{% url 'admin_propertylist' %}">
               <i class="bi bi-circle"></i><span>Property Add</span>
             </a>
           </li>
@@ -351,204 +351,86 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-        
+
         <nav>
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-            <li class="breadcrumb-item">Property</li>
-            <li class="breadcrumb-item active">View</li>
+            <li class="breadcrumb-item">Telecallers</li>
+            <li class="breadcrumb-item active">List</li>
           </ol>
         </nav>
       </div><!-- End Page Title -->
   
       <section class="section">
-        <div class="row align-items-top">
-          <div class="col-lg-4">
+        <div class="row">
+          <div class="col-lg-12">
+  
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Telecallers & Details</h5>
+               
+  
+                <!-- Table with stripped rows -->
+                <table class="table datatable">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">NAME</th>
+                      <th scope="col">EMAIL</th>
+                      <th scope="col">PHONE</th>
+                      <th scope="col">ADDRESS</th>
+                      <th scope="col">GENDER</th>
 
-            <!-- Card with an image on top -->
-
-          <div class="card">
-            <img src="static/img/card1.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h4 class="card-text mt-2">$390,000 - $430,000</h4>
-              <h5 class="card-title">4BHK Alexander Court,New York</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <p><i class="bi bi-geo-alt-fill mx-2  text-muted"></i>245 E 20th St, New York, NY 201609</p>
-              <h6 class="mx-2 my-4 text-muted">
-                <i class="bi bi-grid-1x2-fill mx-1"><span class="mx-2">200 Sq.ft</span></i>
-                <i class="bi bi-moon-fill mx-1"><span class="mx-2">4</span></i>
-                <i class="bi bi-house-fill mx-1"><span class="mx-2">24H</span></i>
-              </h6>
-              
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Karen Eilla Boyette</td>
+                      <td>areneboyette@armyspy.com</td>
+                      <td>+502-324-4194</td>
+                      <td>Manchester</td>  
+                      <td>Male</td>
+                      <td><i class="bi bi-trash"></i></td>  
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td> Walter Devid Moye</td>
+                      <td>	chelsea</td>
+                      <td>+502-324-4194</td>
+                      <td>Chicago</td>
+                      <td>Male</td>
+                      <td><i class="bi bi-trash"></i></td> 
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Karen Eilla Boyette</td>
+                        <td>areneboyette@armyspy.com</td>
+                        <td>+502-324-4194</td>
+                        <td>Manchester</td>
+                        <td>Male</td>
+                        <td><i class="bi bi-trash"></i></td>        
+                      </tr>
+                      <tr>
+                        <th scope="row">4</th>
+                        <td> Walter Devid Moye</td>
+                        <td>chelsea</td>
+                        <td>+502-324-4194</td>
+                        <td>Chicago</td>
+                        <td>Female</td>
+                        <td><i class="bi bi-trash"></i></td> 
+                      </tr>
+                   
+                  </tbody>
+                </table>
+                <!-- End Table with stripped rows -->
+  
+              </div>
             </div>
-          </div>
-
-          <!-- End Card with an image on top -->
-
-          </div>
-          <div class="col-lg-4">
-
-            <!-- Card with an image on top -->
-
-          <div class="card">
-            <img src="static/img/card2.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h4 class="card-text mt-2">$390,000 - $430,000</h4>
-              <h5 class="card-title">4BHK Alexander Court,New York</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <p><i class="bi bi-geo-alt-fill mx-2  text-muted"></i>245 E 20th St, New York, NY 201609</p>
-              <h6 class="mx-2 my-4 text-muted">
-                <i class="bi bi-grid-1x2-fill mx-1"><span class="mx-2">200 Sq.ft</span></i>
-                <i class="bi bi-moon-fill mx-1"><span class="mx-2">4</span></i>
-                <i class="bi bi-house-fill mx-1"><span class="mx-2">24H</span></i>
-              </h6>
-              
-            </div>
-          </div>
-
-          <!-- End Card with an image on top -->
-
-          </div>
-          <div class="col-lg-4">
-
-            <!-- Card with an image on top -->
-
-          <div class="card">
-            <img src="static/img/card3.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h4 class="card-text mt-2">$390,000 - $430,000</h4>
-              <h5 class="card-title">4BHK Alexander Court,New York</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <p><i class="bi bi-geo-alt-fill mx-2  text-muted"></i>245 E 20th St, New York, NY 201609</p>
-              <h6 class="mx-2 my-4 text-muted">
-                <i class="bi bi-grid-1x2-fill mx-1"><span class="mx-2">200 Sq.ft</span></i>
-                <i class="bi bi-moon-fill mx-1"><span class="mx-2">4</span></i>
-                <i class="bi bi-house-fill mx-1"><span class="mx-2">24H</span></i>
-              </h6>
-              
-            </div>
-          </div>
-
-          <!-- End Card with an image on top -->
-
-          </div>
-          <div class="col-lg-4">
-
-            <!-- Card with an image on top -->
-
-          <div class="card">
-            <img src="static/img/card1.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h4 class="card-text mt-2">$390,000 - $430,000</h4>
-              <h5 class="card-title">4BHK Alexander Court,New York</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <p><i class="bi bi-geo-alt-fill mx-2  text-muted"></i>245 E 20th St, New York, NY 201609</p>
-              <h6 class="mx-2 my-4 text-muted">
-                <i class="bi bi-grid-1x2-fill mx-1"><span class="mx-2">200 Sq.ft</span></i>
-                <i class="bi bi-moon-fill mx-1"><span class="mx-2">4</span></i>
-                <i class="bi bi-house-fill mx-1"><span class="mx-2">24H</span></i>
-              </h6>
-              
-            </div>
-          </div>
-
-          <!-- End Card with an image on top -->
-
-          </div>
-          <div class="col-lg-4">
-
-            <!-- Card with an image on top -->
-
-          <div class="card">
-            <img src="static/img/card2.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h4 class="card-text mt-2">$390,000 - $430,000</h4>
-              <h5 class="card-title">4BHK Alexander Court,New York</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <p><i class="bi bi-geo-alt-fill mx-2  text-muted"></i>245 E 20th St, New York, NY 201609</p>
-              <h6 class="mx-2 my-4 text-muted">
-                <i class="bi bi-grid-1x2-fill mx-1"><span class="mx-2">200 Sq.ft</span></i>
-                <i class="bi bi-moon-fill mx-1"><span class="mx-2">4</span></i>
-                <i class="bi bi-house-fill mx-1"><span class="mx-2">24H</span></i>
-              </h6>
-              
-            </div>
-          </div>
-
-          <!-- End Card with an image on top -->
-
-          </div>
-          <div class="col-lg-4">
-
-            <!-- Card with an image on top -->
-
-          <div class="card">
-            <img src="static/img/card3.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h4 class="card-text mt-2">$390,000 - $430,000</h4>
-              <h5 class="card-title">4BHK Alexander Court,New York</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <p><i class="bi bi-geo-alt-fill mx-2  text-muted"></i>245 E 20th St, New York, NY 201609</p>
-              <h6 class="mx-2 my-4 text-muted">
-                <i class="bi bi-grid-1x2-fill mx-1"><span class="mx-2">200 Sq.ft</span></i>
-                <i class="bi bi-moon-fill mx-1"><span class="mx-2">4</span></i>
-                <i class="bi bi-house-fill mx-1"><span class="mx-2">24H</span></i>
-              </h6>
-              
-            </div>
-          </div>
-
-          <!-- End Card with an image on top -->
-
-          </div>
-          <div class="col-lg-4">
-
-            <!-- Card with an image on top -->
-
-          <div class="card">
-            <img src="static/img/card2.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h4 class="card-text mt-2">$390,000 - $430,000</h4>
-              <h5 class="card-title">4BHK Alexander Court,New York</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <p><i class="bi bi-geo-alt-fill mx-2  text-muted"></i>245 E 20th St, New York, NY 201609</p>
-              <h6 class="mx-2 my-4 text-muted">
-                <i class="bi bi-grid-1x2-fill mx-1"><span class="mx-2">200 Sq.ft</span></i>
-                <i class="bi bi-moon-fill mx-1"><span class="mx-2">4</span></i>
-                <i class="bi bi-house-fill mx-1"><span class="mx-2">24H</span></i>
-              </h6>
-              
-            </div>
-          </div>
-
-          <!-- End Card with an image on top -->
-
-          </div>
-          <div class="col-lg-4">
-
-            <!-- Card with an image on top -->
-
-          <div class="card">
-            <img src="static/img/card3.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h4 class="card-text mt-2">$390,000 - $430,000</h4>
-              <h5 class="card-title">4BHK Alexander Court,New York</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <p><i class="bi bi-geo-alt-fill mx-2  text-muted"></i>245 E 20th St, New York, NY 201609</p>
-              <h6 class="mx-2 my-4 text-muted">
-                <i class="bi bi-grid-1x2-fill mx-1"><span class="mx-2">200 Sq.ft</span></i>
-                <i class="bi bi-moon-fill mx-1"><span class="mx-2">4</span></i>
-                <i class="bi bi-house-fill mx-1"><span class="mx-2">24H</span></i>
-              </h6>
-              
-            </div>
-          </div>
-
-          <!-- End Card with an image on top -->
-
+  
           </div>
         </div>
-    </section>
+      </section>
 
    
 

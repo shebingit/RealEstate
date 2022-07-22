@@ -18,7 +18,10 @@ urlpatterns =[  path('load_index',views.load_index,name='load_index'),
                 path('admin_propertyview',views.admin_propertyview,name='admin_propertyview'),
                 path('admin_agent',views.admin_agent,name='admin_agent'),
                 path('admin_agentadd',views.admin_agentadd,name='admin_agentadd'),
-                path('admin_propertyadd',views.admin_propertyadd,name='admin_propertyadd'),  
+                path('admin_propertyadd',views.admin_propertyadd,name='admin_propertyadd'), 
+                path('admin_telecaller',views.admin_telecaller,name='admin_telecaller'),
+                path('admin_telecalleradd',views.admin_telecalleradd,name='admin_telecalleradd'),
+                path('admin_loc_visit_schedule',views.admin_loc_visit_schedule,name='admin_loc_visit_schedule'),  
 
                 #Staf
 

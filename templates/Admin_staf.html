@@ -321,6 +321,29 @@
           </li>
         </ul>
       </li><!-- Propperty-->
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#telecaller" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-telephone"></i><span>Telecallers</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="telecaller" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="{% url 'admin_telecaller' %}">
+              <i class="bi bi-telephone"></i><span>All Telecallers</span>
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'admin_telecalleradd' %}">
+              <i class="bi bi-telephone"></i><span>Add Telecallers</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- Propperty-->
+      <li class="nav-item">
+        <a class="nav-link " href="{% url 'admin_loc_visit_schedule' %}">
+          <i class="bi bi-geo-alt"></i>
+          <span>Visit Schedule</span>
+        </a>
+      </li><!-- End location visit Nav -->
     </ul>
 
   </aside><!-- End Sidebar-->
@@ -328,11 +351,11 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Dashboard</h1>
+
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item active">Staf</li>
+          <li class="breadcrumb-item"><a href="{% url 'load_index' %}">Home</a></li>
+          <li class="breadcrumb-item active">Staff</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
@@ -344,12 +367,12 @@
         <div class="col-lg-12">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Agent Tabs</h5>
+              <h5 class="card-title">Telecaller Tabs</h5>
 
               <!-- Bordered Tabs -->
               <ul class="nav nav-tabs nav-tabs-bordered" id="borderedTab" role="tablist">
                 <li class="nav-item" role="presentation">
-                  <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#bordered-home" type="button" role="tab" aria-controls="home" aria-selected="true">Clints</button>
+                  <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#bordered-home" type="button" role="tab" aria-controls="home" aria-selected="true">Clients</button>
                 </li>
                 <li class="nav-item" role="presentation">
                   <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#bordered-profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Buyers</button>
@@ -363,39 +386,144 @@
                   <div class="row">
 
                     
-                    <div class="col-xxl-3 col-md-6">
+                    <div class="col-xxl-12 col-md-6">
                       <div class="card info-card sales-card mt-3">
         
                         <div class="card-body">
-                          <a href="#"><h5 class="card-title">Full Name</h5></a>
+                          <a href="#"><h5 class="card-title"> Karen Eilla Boyette</h5></a>
         
                           <div class="d-flex align-items-center">
                             <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                              <i class="bi bi-geo-alt-fill mx-2"><h6>kollam</h6></i>
-                              <i class="bi bi-telephone mx-3"><h6>789865225</h6></i>
+                              <h6 class="mx-2">
+                                <i class="bi bi-geo-alt-fill"> Alappuzha</i>
+                                <i class="bi bi-telephone mx-2"> 789865225</i>
+                              </h6>
                               
                             </div>
                           </div>
                         </div>
         
                       </div>
+                      <div class="row">
+                        <div class="col-xxl-4 col-md-6">
+                          <div class="card">
+                            <img src="static/img/card1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h4 class="card-text mt-2">$390,000 - $430,000</h4>
+                              <a href="{% url 'staf_cliant_property' %}"><h5 class="card-title">4BHK Alexander Court,New York</h5></a>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <p><i class="bi bi-geo-alt-fill mx-2  text-muted"></i>245 E 20th St, New York, NY 201609</p>
+                              <h6 class="mx-2 my-4 text-muted">
+                                <i class="bi bi-grid-1x2-fill mx-1"><span class="mx-2">200 Sq.ft</span></i>
+                                <i class="bx bxs-hotel mx-1"><span class="mx-2">4</span></i>
+                                <i class="ri ri-car-fill mx-1"><span class="mx-2">2</span></i>
+                                <i class="bi bi-house-fill mx-1"><span class="mx-2">24H</span></i>
+                              </h6>
+                              <h6 class="m-3"> Status: <span>Wating</span></h6>
+                              
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-xxl-4 col-md-6">
+                          <div class="card">
+                            <img src="static/img/card2.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h4 class="card-text mt-2">$390,000 - $430,000</h4>
+                              <a href="{% url 'staf_cliant_property' %}"><h5 class="card-title">4BHK Alexander Court,New York</h5></a>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <p><i class="bi bi-geo-alt-fill mx-2  text-muted"></i>245 E 20th St, New York, NY 201609</p>
+                              <h6 class="mx-2 my-4 text-muted">
+                                <i class="bi bi-grid-1x2-fill mx-1"><span class="mx-2">200 Sq.ft</span></i>
+                                <i class="bx bxs-hotel mx-1"><span class="mx-2">4</span></i>
+                                <i class="ri ri-car-fill mx-1"><span class="mx-2">2</span></i>
+                                <i class="bi bi-house-fill mx-1"><span class="mx-2">24H</span></i>
+                              </h6>
+                              <h6 class="m-3"> Status: <span>Wating</span></h6>
+                              
+                            </div>
+                           
+                          </div>
+                        </div>
+
+                      </div>
                     </div><!-- End Sales Card -->
 
-                    <div class="col-xxl-3 col-md-6">
+                    <div class="col-xxl-12 col-md-6">
                         <div class="card info-card sales-card mt-3">
           
                           <div class="card-body">
-                            <a href="#"><h5 class="card-title">Full Name</h5></a>
+                            <a href="#"><h5 class="card-title">Linda Dina Pate</h5></a>
           
                             <div class="d-flex align-items-center">
                               <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                <i class="bi bi-geo-alt-fill mx-2"><h6>kollam</h6></i>
-                                <i class="bi bi-telephone mx-3"><h6>789865225</h6></i>
+                                <h6 class="mx-2">
+                                  <i class="bi bi-geo-alt-fill"> Kottayam</i>
+                                  <i class="bi bi-telephone mx-2"> 789865225</i>
+                                </h6>
                                 
                               </div>
                             </div>
                           </div>
           
+                        </div>
+                        <div class="row">
+                          <div class="col-xxl-4 col-md-6">
+                            <div class="card">
+                              <img src="static/img/card2.jpg" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                <h4 class="card-text mt-2">$390,000 - $430,000</h4>
+                                <a href="{% url 'staf_cliant_property' %}"><h5 class="card-title">4BHK Alexander Court,New York</h5></a>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <p><i class="bi bi-geo-alt-fill mx-2  text-muted"></i>245 E 20th St, New York, NY 201609</p>
+                                <h6 class="mx-2 my-4 text-muted">
+                                  <i class="bi bi-grid-1x2-fill mx-1"><span class="mx-2">200 Sq.ft</span></i>
+                                  <i class="bx bxs-hotel mx-1"><span class="mx-2">4</span></i>
+                                  <i class="ri ri-car-fill mx-1"><span class="mx-2">2</span></i>
+                                  <i class="bi bi-house-fill mx-1"><span class="mx-2">24H</span></i>
+                                </h6>
+                                <h6 class="m-3"> Status: <span>Wating</span></h6>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-xxl-4 col-md-6">
+                            <div class="card">
+                              <img src="static/img/card3.jpg" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                <h4 class="card-text mt-2">$390,000 - $430,000</h4>
+                                <a href="{% url 'staf_cliant_property' %}"><h5 class="card-title">4BHK Alexander Court,New York</h5></a>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <p><i class="bi bi-geo-alt-fill mx-2  text-muted"></i>245 E 20th St, New York, NY 201609</p>
+                                <h6 class="mx-2 my-4 text-muted">
+                                  <i class="bi bi-grid-1x2-fill mx-1"><span class="mx-2">200 Sq.ft</span></i>
+                                  <i class="bx bxs-hotel mx-1"><span class="mx-2">4</span></i>
+                                  <i class="ri ri-car-fill mx-1"><span class="mx-2">2</span></i>
+                                  <i class="bi bi-house-fill mx-1"><span class="mx-2">24H</span></i>
+                                </h6>
+                                <h6 class="m-3"> Status: <span>Liked</span></h6>
+                                
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-xxl-4 col-md-6">
+                            <div class="card">
+                              <img src="static/img/card1.jpg" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                <h4 class="card-text mt-2">$390,000 - $430,000</h4>
+                                <a href="{% url 'staf_cliant_property' %}"><h5 class="card-title">4BHK Alexander Court,New York</h5></a>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <p><i class="bi bi-geo-alt-fill mx-2  text-muted"></i>245 E 20th St, New York, NY 201609</p>
+                                <h6 class="mx-2 my-4 text-muted">
+                                  <i class="bi bi-grid-1x2-fill mx-1"><span class="mx-2">200 Sq.ft</span></i>
+                                  <i class="bx bxs-hotel mx-1"><span class="mx-2">4</span></i>
+                                  <i class="ri ri-car-fill mx-1"><span class="mx-2">2</span></i>
+                                  <i class="bi bi-house-fill mx-1"><span class="mx-2">24H</span></i>
+                                </h6>
+                                <h6 class="m-3"> Status: <span>Wating</span></h6>
+                                
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div><!-- End Sales Card -->
 
@@ -412,7 +540,7 @@
                             <img src="static/img/card1.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                              
-                              <a href="{% url 'admin_staf' %}"><h5 class="card-title">Full Name</h5></a>
+                              <a href="{% url 'admin_staf' %}"><h5 class="card-title">Linda Dina Pate</h5></a>
             
                               <div class="d-flex align-items-center">
                                 <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
@@ -422,6 +550,16 @@
                                   
                                 </div>
                               </div>
+                              <h4 class="card-text mt-2">$390,000 - $430,000</h4>
+                                <a href="{% url 'staf_cliant_property' %}"><h5 class="card-title">4BHK Alexander Court,New York</h5></a>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <p><i class="bi bi-geo-alt-fill mx-2  text-muted"></i>245 E 20th St, New York, NY 201609</p>
+                                <h6 class="mx-2 my-4 text-muted">
+                                    <i class="bi bi-grid-1x2-fill mx-1"><span class="mx-2">200 Sq.ft</span></i>
+                                    <i class="bx bxs-hotel mx-1"><span class="mx-2">4</span></i>
+                                    <i class="ri ri-car-fill mx-1"><span class="mx-2">2</span></i>
+                                    <i class="bi bi-house-fill mx-1"><span class="mx-2">24H</span></i>
+                                </h6>
                             </div>
             
                           </div>
@@ -432,7 +570,7 @@
                               <img src="static/img/card2.jpg" class="card-img-top" alt="...">
                               <div class="card-body">
                                
-                                <a href="{% url 'admin_staf' %}"><h5 class="card-title">Full Name</h5></a>
+                                <a href="{% url 'admin_staf' %}"><h5 class="card-title"> Karen Eilla Boyette</h5></a>
               
                                 <div class="d-flex align-items-center">
                                   <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
@@ -442,6 +580,16 @@
                                     
                                   </div>
                                 </div>
+                                <h4 class="card-text mt-2">$390,000 - $430,000</h4>
+                                <a href="{% url 'staf_cliant_property' %}"><h5 class="card-title">4BHK Alexander Court,New York</h5></a>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <p><i class="bi bi-geo-alt-fill mx-2  text-muted"></i>245 E 20th St, New York, NY 201609</p>
+                                <h6 class="mx-2 my-4 text-muted">
+                                    <i class="bi bi-grid-1x2-fill mx-1"><span class="mx-2">200 Sq.ft</span></i>
+                                    <i class="bx bxs-hotel mx-1"><span class="mx-2">4</span></i>
+                                    <i class="ri ri-car-fill mx-1"><span class="mx-2">2</span></i>
+                                    <i class="bi bi-house-fill mx-1"><span class="mx-2">24H</span></i>
+                                </h6>
                               </div>
               
                             </div>
@@ -452,7 +600,7 @@
                               <img src="static/img/card3.jpg" class="card-img-top" alt="...">
                               <div class="card-body">
                                
-                                <a href="{% url 'admin_staf' %}"><h5 class="card-title">Full Name</h5></a>
+                                <a href="{% url 'admin_staf' %}"><h5 class="card-title"> Walter Devid Moye</h5></a>
               
                                 <div class="d-flex align-items-center">
                                   <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
@@ -462,6 +610,16 @@
                                     
                                   </div>
                                 </div>
+                                <h4 class="card-text mt-2">$390,000 - $430,000</h4>
+                                <a href="{% url 'staf_cliant_property' %}"><h5 class="card-title">4BHK Alexander Court,New York</h5></a>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <p><i class="bi bi-geo-alt-fill mx-2  text-muted"></i>245 E 20th St, New York, NY 201609</p>
+                                <h6 class="mx-2 my-4 text-muted">
+                                    <i class="bi bi-grid-1x2-fill mx-1"><span class="mx-2">200 Sq.ft</span></i>
+                                    <i class="bx bxs-hotel mx-1"><span class="mx-2">4</span></i>
+                                    <i class="ri ri-car-fill mx-1"><span class="mx-2">2</span></i>
+                                    <i class="bi bi-house-fill mx-1"><span class="mx-2">24H</span></i>
+                                </h6>
                               </div>
               
                             </div>

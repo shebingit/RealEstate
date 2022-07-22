@@ -321,6 +321,30 @@
           </li>
         </ul>
       </li><!-- Propperty-->
+      
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#telecaller" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-telephone"></i><span>Telecallers</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="telecaller" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="{% url 'admin_telecaller' %}">
+              <i class="bi bi-telephone"></i><span>All Telecallers</span>
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'admin_telecalleradd' %}">
+              <i class="bi bi-telephone"></i><span>Add Telecallers</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- Propperty-->
+      <li class="nav-item">
+        <a class="nav-link " href="{% url 'admin_loc_visit_schedule' %}">
+          <i class="bi bi-geo-alt"></i>
+          <span>Visit Schedule</span>
+        </a>
+      </li><!-- End location visit Nav -->
     </ul>
 
   </aside><!-- End Sidebar-->

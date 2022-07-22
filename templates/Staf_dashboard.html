@@ -336,9 +336,7 @@
                 <div class="tab-pane fade show active" id="bordered-home" role="tabpanel" aria-labelledby="home-tab">
                   
                     <div class="row">
-  
-                      
-                      <div class="col-xxl-3 col-md-6">
+                      <div class="col-xxl-4 col-md-6">
                         <div class="card info-card sales-card mt-3">
           
                           <div class="card-body">
@@ -346,17 +344,18 @@
           
                             <div class="d-flex align-items-center">
                               <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                <i class="bi bi-geo-alt-fill mx-2"><h6>kollam</h6></i>
-                                <i class="bi bi-telephone mx-3"><h6>789865225</h6></i>
+                                <h6> 
+                                    <i class="bi bi-geo-alt-fill mx-2"> kollam</i>
+                                    <i class="bi bi-telephone"> 789865225</i> 
+                                </h6> 
                                 
                               </div>
                             </div>
                           </div>
           
                         </div>
-                      </div><!-- End Sales Card -->
-  
-                      <div class="col-xxl-3 col-md-6">
+                      </div>
+                      <div class="col-xxl-4 col-md-6">
                           <div class="card info-card sales-card mt-3">
             
                             <div class="card-body">
@@ -364,25 +363,25 @@
             
                               <div class="d-flex align-items-center">
                                 <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                  <i class="bi bi-geo-alt-fill mx-2"><h6>Eranakulam</h6></i>
-                                  <i class="bi bi-telephone mx-3"><h6>789865225</h6></i>
+                                    <h6> 
+                                        <i class="bi bi-geo-alt-fill mx-2"> Eranakulam</i>
+                                        <i class="bi bi-telephone"> 789865225</i> 
+                                    </h6> 
                                   
                                 </div>
                               </div>
                             </div>
             
                           </div>
-                        </div><!-- End Sales Card -->
-  
+                      </div>
                     </div>
-  
+
                 </div>
+
                 <div class="tab-pane fade" id="bordered-profile" role="tabpanel" aria-labelledby="profile-tab">
                     
                     <div class="row">
-  
-                      
-                        <div class="col-xxl-3 col-md-6">
+                        <div class="col-xxl-6 col-md-6">
                           <div class="card info-card sales-card mt-3">
             
                             <div class="card-body">
@@ -390,65 +389,113 @@
             
                               <div class="d-flex align-items-center">
                                 <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                  <i class="bi bi-geo-alt-fill mx-2"><h6>kollam</h6></i>
-                                  <i class="bi bi-telephone mx-3"><h6>789865225</h6></i>                     
+                                <h6> 
+                                    <i class="bi bi-geo-alt-fill mx-2">kollam</i>
+                                    <i class="bi bi-telephone mx-3">789865225</i> 
+                                </h6>                    
                                 </div>
                               </div>
                             </div>
 
                             <div class="card-footer">
-                                <button type="button" class="btn btn-sm-info" data-bs-toggle="modal" data-bs-target="#smallModal">
-                                    Site Visit
-                                   </button>
+                                <button type="button" class="btn btn-sm-info">
+                                   <a href="{% url 'staf_cliant_propertyview' %}">Property View</a> 
+                                   <a class="mx-3" data-bs-toggle="modal" data-bs-target="#smallModal"> Location Visit</a>
+                                </button>
+
+                                <div class="modal fade" id="smallModal" tabindex="-1">
+                                    <div class="modal-dialog modal-sm">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                        <h5 class="modal-title">Cliant Visit Date Add</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                           <form class="row g-3">
+                                               <div class="col-md-12">
+                                                 <label for="inputName5" class="form-label">Name</label>
+                                                 <input type="text" class="form-control" id="inputName5">
+                                               </div>
+                                               <div class="col-md-12">
+                                                 <label for="inputEmail5" class="form-label">Phone</label>
+                                                 <input type="email" class="form-control" id="inputEmail5">
+                                               </div>
+                                               <div class="col-md-12">
+                                                   <label for="inputEmail5" class="form-label">Date</label>
+                                                   <input type="date" class="form-control" id="inputEmail5">
+                                                 </div>
+                                               
+                            
+                                               <div class="col-md-12">
+                                                 <label for="inputState" class="form-label">Time</label>
+                                                 <select id="inputState" class="form-select">
+                                                   <option selected>Choose...</option>
+                                                   <option>Morning</option>
+                                                   <option>AfterNoon</option>
+                                                   <option>Evening</option>
+                                                 </select>
+                                               </div>
+                                              
+                                               <div class="text-center">
+                                                 <button type="submit" class="btn btn-primary">Submit</button>
+                                                 <button type="reset" class="btn btn-secondary">Reset</button>
+                                               </div>
+                                             </form>
+                                           </div>
+                                    </div>
+                                    </div>
+                                </div><!-- End Small Modal-->
  
-                                     <div class="modal fade" id="smallModal" tabindex="-1">
-                                         <div class="modal-dialog modal-sm">
-                                         <div class="modal-content">
-                                             <div class="modal-header">
-                                             <h5 class="modal-title">Cliant Visit Date Add</h5>
-                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                             </div>
-                                             <div class="modal-body">
-                                                <form class="row g-3">
-                                                    <div class="col-md-12">
-                                                      <label for="inputName5" class="form-label">Name</label>
-                                                      <input type="text" class="form-control" id="inputName5">
-                                                    </div>
-                                                    <div class="col-md-12">
-                                                      <label for="inputEmail5" class="form-label">Phone</label>
-                                                      <input type="email" class="form-control" id="inputEmail5">
-                                                    </div>
-                                                    <div class="col-md-12">
-                                                        <label for="inputEmail5" class="form-label">Date</label>
-                                                        <input type="date" class="form-control" id="inputEmail5">
-                                                      </div>
-                                                    
-                                
-                                                    <div class="col-md-12">
-                                                      <label for="inputState" class="form-label">Time</label>
-                                                      <select id="inputState" class="form-select">
-                                                        <option selected>Choose...</option>
-                                                        <option>Morning</option>
-                                                        <option>AfterNoon</option>
-                                                        <option>Evening</option>
-                                                      </select>
-                                                    </div>
-                                                   
-                                                    <div class="text-center">
-                                                      <button type="submit" class="btn btn-primary">Submit</button>
-                                                      <button type="reset" class="btn btn-secondary">Reset</button>
-                                                    </div>
-                                                  </form>
-                                                </div>
-                                         </div>
-                                         </div>
-                                     </div><!-- End Small Modal-->
                             </div>
             
                           </div>
+                          <div class="row">
+                            <div class="col-lg-12"> 
+                                <div class="card mb-3">
+                                    <div class="row g-0 m-2">
+                                        <div class="col-md-4">
+                                            <img src="static/img/card3.jpg" class="card-img-top mb-3" alt="...">
+                                            <i class="bi bi-bag-check-fill mx-1 mb-1"><span class="mx-2 text-success">Buy</span></i>
+                                            <i class="bi bi-x-octagon-fill mx-1 mb-1 "><span class="mx-2 text-danger">Cancel</span></i>
+                                            <h6 class="m-4"> Status: <span>Wating</span></h6>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <h5 class="card-text mt-2">$390,000 </h5>
+                                                <a href="{% url 'staf_cliant_property' %}"><h5 class="card-title">4BHK Alexander Court,New York</h5></a>
+                                                <p><i class="bi bi-geo-alt-fill mx-2  text-muted"></i>245 E 20th St, New York, NY 201609</p>          
+                                            </div>
+                                            <h6 class="mx-2  text-muted">
+                                                <i class="bi bi-grid-1x2-fill mx-1"><span class="mx-2">200 Sq.ft</span></i>
+                                                <i class="bx bxs-hotel mx-1"><span class="mx-2">4</span></i>
+                                                <i class="ri ri-car-fill mx-1"><span class="mx-2">2</span></i>
+                                                <i class="bi bi-house-fill mx-1"><span class="mx-2">24H</span></i>
+                                            </h6> 
+
+                                            <div class="card-footer">
+                                              <div class="row">
+                                                <div class="col-lg-8">
+                                                  <select id="inputState" class="form-select round">
+                                                    <option selected>Status Change</option>
+                                                    <option>Visited</option>
+                                                    <option>Wating</option>
+                                                    <option>Liked</option>
+                                                  </select>
+                                                </div>
+                                                <div class="col-lg-4">
+                                                  <button type="submit" class="btn btn-primary">Update</button>
+                                                </div>
+                                              </div>
+                                              
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
                         </div><!-- End Sales Card -->
     
-                        <div class="col-xxl-3 col-md-6">
+                        <div class="col-xxl-6 col-md-6">
                             <div class="card info-card sales-card mt-3">
               
                               <div class="card-body">
@@ -456,66 +503,156 @@
               
                                 <div class="d-flex align-items-center">
                                   <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                    <i class="bi bi-geo-alt-fill mx-2"><h6>Vayand</h6></i>
-                                    <i class="bi bi-telephone mx-3"><h6>789865225</h6></i>
+                                    <h6> 
+                                        <i class="bi bi-geo-alt-fill mx-2"> Vayanad</i>
+                                        <i class="bi bi-telephone mx-3"> 898652251</i> 
+                                    </h6> 
                                     
                                   </div>
                                 </div>
                               </div>
 
                               <div class="card-footer">
-                                <button type="button" class="btn btn-sm-info" data-bs-toggle="modal" data-bs-target="#smallModal">
-                                    Site Visit
-                                   </button>
+                                <button type="button" class="btn btn-sm-info">
+                                    <a href="{% url 'staf_cliant_propertyview' %}">Property View</a> 
+                                    <a class="mx-3" data-bs-toggle="modal" data-bs-target="#smallModal"> Location Visit</a>
+                                 </button>
  
-                                     <div class="modal fade" id="smallModal" tabindex="-1">
-                                         <div class="modal-dialog modal-sm">
-                                         <div class="modal-content">
-                                             <div class="modal-header">
-                                             <h5 class="modal-title">Cliant Visit Date Add</h5>
-                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                             </div>
-                                             <div class="modal-body">
-                                                <form class="row g-3">
-                                                    <div class="col-md-12">
-                                                      <label for="inputName5" class="form-label">Name</label>
-                                                      <input type="text" class="form-control" id="inputName5">
-                                                    </div>
-                                                    <div class="col-md-12">
-                                                      <label for="inputEmail5" class="form-label">Phone</label>
-                                                      <input type="email" class="form-control" id="inputEmail5">
-                                                    </div>
-                                                    <div class="col-md-12">
-                                                        <label for="inputEmail5" class="form-label">Date</label>
-                                                        <input type="date" class="form-control" id="inputEmail5">
-                                                      </div>
-                                                    
-                                
-                                                    <div class="col-md-12">
-                                                      <label for="inputState" class="form-label">Time</label>
-                                                      <select id="inputState" class="form-select">
-                                                        <option selected>Choose...</option>
-                                                        <option>Morning</option>
-                                                        <option>AfterNoon</option>
-                                                        <option>Evening</option>
-                                                      </select>
-                                                    </div>
-                                                   
-                                                    <div class="text-center">
-                                                      <button type="submit" class="btn btn-primary">Submit</button>
-                                                      <button type="reset" class="btn btn-secondary">Reset</button>
-                                                    </div>
-                                                  </form>
+                                 <div class="modal fade" id="smallModal" tabindex="-1">
+                                     <div class="modal-dialog modal-sm">
+                                     <div class="modal-content">
+                                         <div class="modal-header">
+                                         <h5 class="modal-title">Cliant Visit Date Add</h5>
+                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                         </div>
+                                         <div class="modal-body">
+                                            <form class="row g-3">
+                                                <div class="col-md-12">
+                                                  <label for="inputName5" class="form-label">Name</label>
+                                                  <input type="text" class="form-control" id="inputName5">
                                                 </div>
-                                         </div>
-                                         </div>
-                                     </div><!-- End Small Modal-->
-                            </div>
+                                                <div class="col-md-12">
+                                                  <label for="inputEmail5" class="form-label">Phone</label>
+                                                  <input type="email" class="form-control" id="inputEmail5">
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <label for="inputEmail5" class="form-label">Date</label>
+                                                    <input type="date" class="form-control" id="inputEmail5">
+                                                  </div>
+                                                
+                             
+                                                <div class="col-md-12">
+                                                  <label for="inputState" class="form-label">Time</label>
+                                                  <select id="inputState" class="form-select">
+                                                    <option selected>Choose...</option>
+                                                    <option>Morning</option>
+                                                    <option>AfterNoon</option>
+                                                    <option>Evening</option>
+                                                  </select>
+                                                </div>
+                                               
+                                                <div class="text-center">
+                                                  <button type="submit" class="btn btn-primary">Submit</button>
+                                                  <button type="reset" class="btn btn-secondary">Reset</button>
+                                                </div>
+                                              </form>
+                                            </div>
+                                     </div>
+                                     </div>
+                                 </div><!-- End Small Modal-->
+                                
+                              </div>
               
                             </div>
-                          </div><!-- End Sales Card -->
-    
-                      </div> 
+                            <div class="row">
+                                <div class="col-lg-12"> 
+                                    <div class="card mb-3">
+                                        <div class="row g-0 m-2">
+                                            <div class="col-md-4">
+                                                <img src="static/img/card1.jpg" class="card-img-top mb-3" alt="...">
+                                                <i class="bi bi-bag-check-fill mx-1 mb-1"><span class="mx-2 text-success">Buy</span></i>
+                                                <i class="bi bi-x-octagon-fill mx-1 mb-1 "><span class="mx-2 text-danger">Cancel</span></i>
+                                                <h6 class="m-4"> Status: <span>Wating</span></h6>
+                                                
+
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="card-body">
+                                                    <h5 class="card-text mt-2">$390,000 </h5>
+                                                    <a href="{% url 'staf_cliant_property' %}"><h5 class="card-title">4BHK Alexander Court,New York</h5></a>
+                                                    <p><i class="bi bi-geo-alt-fill mx-2  text-muted"></i>245 E 20th St, New York, NY 201609</p>          
+                                                </div>
+                                                <h6 class="mx-2  text-muted">
+                                                    <i class="bi bi-grid-1x2-fill mx-1"><span class="mx-2">200 Sq.ft</span></i>
+                                                    <i class="bx bxs-hotel mx-1"><span class="mx-2">4</span></i>
+                                                    <i class="ri ri-car-fill mx-1"><span class="mx-2">2</span></i>
+                                                    <i class="bi bi-house-fill mx-1"><span class="mx-2">24H</span></i>
+                                                </h6> 
+                                                <div class="card-footer">
+                                                  <div class="row">
+                                                    <div class="col-lg-8">
+                                                      <select id="inputState" class="form-select round">
+                                                        <option selected>Status Change</option>
+                                                        <option>Visited</option>
+                                                        <option>Wating</option>
+                                                        <option>Liked</option>
+                                                      </select>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                      <button type="submit" class="btn btn-primary">Update</button>
+                                                    </div>
+                                                  </div>
+                                                  
+                                                </div>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="col-lg-12"> 
+                                    <div class="card mb-3">
+                                        <div class="row g-0 m-2">
+                                            <div class="col-md-4">
+                                                <img src="static/img/card2.jpg" class="card-img-top mb-3" alt="...">
+                                                <i class="bi bi-bag-check-fill mx-1 mb-1"><span class="mx-2 text-success">Buy</span></i>
+                                                <i class="bi bi-x-octagon-fill mx-1 mb-1 "><span class="mx-2 text-danger">Cancel</span></i>
+                                                <h6 class="m-4"> Status: <span>Wating</span></h6>
+                                                
+
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="card-body">
+                                                    <h5 class="card-text mt-2">$390,000 </h5>
+                                                    <a href="{% url 'staf_cliant_property' %}"><h5 class="card-title">4BHK Alexander Court,New York</h5></a>
+                                                    <p><i class="bi bi-geo-alt-fill mx-2  text-muted"></i>245 E 20th St, New York, NY 201609</p>          
+                                                </div>
+                                                <h6 class="mx-2  text-muted">
+                                                    <i class="bi bi-grid-1x2-fill mx-1"><span class="mx-2">200 Sq.ft</span></i>
+                                                    <i class="bx bxs-hotel mx-1"><span class="mx-2">4</span></i>
+                                                    <i class="ri ri-car-fill mx-1"><span class="mx-2">2</span></i>
+                                                    <i class="bi bi-house-fill mx-1"><span class="mx-2">24H</span></i>
+                                                </h6> 
+                                                <div class="card-footer">
+                                                  <div class="row">
+                                                    <div class="col-lg-8">
+                                                      <select id="inputState" class="form-select round">
+                                                        <option selected>Status Change</option>
+                                                        <option>Visited</option>
+                                                        <option>Wating</option>
+                                                        <option>Liked</option>
+                                                      </select>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                      <button type="submit" class="btn btn-primary">Update</button>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- End Sales Card -->
+                    </div> 
   
                 </div>
                 <div class="tab-pane fade" id="bordered-contact" role="tabpanel" aria-labelledby="contact-tab">
