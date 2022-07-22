@@ -11,8 +11,8 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="{% static 'img/favicon.png' %}" rel="icon">
-  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+  <link href="{% static 'img/logo.png' %}" rel="icon">
+  <link href="{% static 'img/logo.png' %}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.gstatic.com" rel="preconnect">
@@ -36,6 +36,16 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+<style>
+  @media(max-width:921px)
+  {
+    table {
+      font-size: 13px;
+      }
+  }
+ 
+  
+</style>
 </head>
 
 <body>
@@ -363,15 +373,15 @@
   
       <section class="section">
         <div class="row">
-          <div class="col-lg-12">
+          <div class="col-lg-12 col-md-6 col-xxl-12">
   
-            <div class="card">
+            <div class="card overflow-auto">
               <div class="card-body">
                 <h5 class="card-title">Property and Details</h5>
                
   
                 <!-- Table with stripped rows -->
-                <table class="table datatable">
+                <table class="table datatable" id="t1">
                   <thead>
                     <tr>
                       <th scope="col">#</th>
@@ -402,7 +412,7 @@
                     <tr>
                       <th scope="row">2</th>
                       <td>Luxury Apartment</td>
-                      <td>	chelsea</td>
+                      <td>chelsea</td>
                       <td>2 BHK</td>
                       <td>2,000 ft2</td>
                       <td>Maria Barlow</td>
@@ -462,7 +472,7 @@
         <div class="row">
           <div class="col-lg-12">
   
-            <div class="card">
+            <div class="card overflow-auto">
               <div class="card-body">
                 <h5 class="card-title">Property Wating List</h5>
                
@@ -524,13 +534,13 @@
         <div class="row">
           <div class="col-lg-12">
   
-            <div class="card">
+            <div class="card overflow-auto">
               <div class="card-body">
                 <h5 class="card-title">Property Sold List</h5>
                
   
                 <!-- Table with stripped rows -->
-                <table class="table datatable">
+                <table class="table datatable" style="table-layout:auto;width:100%;">
                   <thead>
                     <tr>
                       <th scope="col">#</th>

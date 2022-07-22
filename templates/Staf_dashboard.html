@@ -377,7 +377,6 @@
                     </div>
 
                 </div>
-
                 <div class="tab-pane fade" id="bordered-profile" role="tabpanel" aria-labelledby="profile-tab">
                     
                     <div class="row">
@@ -398,10 +397,17 @@
                             </div>
 
                             <div class="card-footer">
-                                <button type="button" class="btn btn-sm-info">
-                                   <a href="{% url 'staf_cliant_propertyview' %}">Property View</a> 
-                                   <a class="mx-3" data-bs-toggle="modal" data-bs-target="#smallModal"> Location Visit</a>
-                                </button>
+                                  <div class="row">
+                                    <div class="col-lg-4 col-md-6 col-sm-12">
+                                      <i class="ri ri-flood-fill"><a href="{% url 'staf_cliant_propertyview' %}"class="m-1">Property View</a></i> 
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-sm-12">
+                                      <i class="ri ri-e-bike-fill"><a class="m-1" data-bs-toggle="modal" data-bs-target="#smallModal">Location Visit</a></i>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-sm-12">
+                                      <i class="ri ri-book-mark-fill"><a class="m-1" data-bs-toggle="modal" data-bs-target="#largeModal">Visit History</a></i>
+                                    </div>
+                                  </div>
 
                                 <div class="modal fade" id="smallModal" tabindex="-1">
                                     <div class="modal-dialog modal-sm">
@@ -445,7 +451,68 @@
                                     </div>
                                     </div>
                                 </div><!-- End Small Modal-->
- 
+
+                                <!-- visit history Modal -->
+              
+                                <div class="modal fade" id="largeModal" tabindex="-1">
+                                  <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <h5 class="modal-title">Visit History</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                      <div class="modal-body overflow-auto">
+                                         <!-- visit history Table -->
+                                        <table class="table table-borderless">
+                                          <thead>
+                                            <tr>
+                                              <th scope="col">#</th>
+                                              <th scope="col">Image</th>
+                                              <th scope="col">Property</th>
+                                              <th scope="col">Place</th>
+                                              <th scope="col">Value</th>
+                                              <th scope="col">Visited Date</th>
+                                              <th scope="col">Status</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr>
+                                              <th scope="row">1</th>
+                                              <td><img src="static/img/card1.jpg" class="card-img-top  mb-3" style="height:60px;width:60px;" alt="..."></td>
+                                              <td>Flat</td>
+                                              <td>Eranakulam</td>
+                                              <td>20LK</td>
+                                              <td>2016-06-02</td>
+                                              <td>Waiting</td>
+                                            </tr>
+                                            <tr>
+                                              <th scope="row">2</th>
+                                              <td><img src="static/img/card2.jpg" class="card-img-top  mb-3" style="height:60px;width:60px;" alt="..."></td>
+                                              <td>Flat</td>
+                                              <td>Eranakulam</td>
+                                              <td>25LK</td>
+                                              <td>2016-05-20</td>
+                                              <td>Liked</td>
+                                            </tr>
+                                            <tr>
+                                              <th scope="row">3</th>
+                                              <td><img src="static/img/card3.jpg" class="card-img-top  mb-3" style="height:60px;width:60px;" alt="..."></td>
+                                              <td>Villa</td>
+                                              <td>Eranakulam</td>
+                                              <td>30LK</td>
+                                              <td>2016-05-15</td>
+                                              <td>Liked</td>
+                                            </tr>
+                                            
+                                          </tbody>
+                                        </table>
+              
+                                      </div>
+                                      
+                                    </div>
+                                  </div>
+                                </div><!-- End visit history Modal-->
+
                             </div>
             
                           </div>
@@ -474,7 +541,7 @@
 
                                             <div class="card-footer">
                                               <div class="row">
-                                                <div class="col-lg-8">
+                                                <div class="col-lg-8 col-md-6 col-sm-4 mb-2">
                                                   <select id="inputState" class="form-select round">
                                                     <option selected>Status Change</option>
                                                     <option>Visited</option>
@@ -482,7 +549,7 @@
                                                     <option>Liked</option>
                                                   </select>
                                                 </div>
-                                                <div class="col-lg-4">
+                                                <div class="col-lg-4 col-md-6 col-sm-4">
                                                   <button type="submit" class="btn btn-primary">Update</button>
                                                 </div>
                                               </div>
@@ -513,10 +580,18 @@
                               </div>
 
                               <div class="card-footer">
-                                <button type="button" class="btn btn-sm-info">
-                                    <a href="{% url 'staf_cliant_propertyview' %}">Property View</a> 
-                                    <a class="mx-3" data-bs-toggle="modal" data-bs-target="#smallModal"> Location Visit</a>
-                                 </button>
+                                <div class="row">
+                                  <div class="col-lg-4 col-md-6 col-sm-12">
+                                    <i class="ri ri-flood-fill"><a href="{% url 'staf_cliant_propertyview' %}"class="m-1">Property View</a></i> 
+                                  </div>
+                                  <div class="col-lg-4 col-md-6 col-sm-12">
+                                    <i class="ri ri-e-bike-fill"><a class="m-1" data-bs-toggle="modal" data-bs-target="#smallModal">Location Visit</a></i>
+                                  </div>
+                                  <div class="col-lg-4 col-md-6 col-sm-12">
+                                    <i class="ri ri-book-mark-fill"><a class="m-1" data-bs-toggle="modal" data-bs-target="#largeModal">Visit History</a></i>
+                                  </div>
+                                </div>
+
  
                                  <div class="modal fade" id="smallModal" tabindex="-1">
                                      <div class="modal-dialog modal-sm">
@@ -590,7 +665,7 @@
                                                 </h6> 
                                                 <div class="card-footer">
                                                   <div class="row">
-                                                    <div class="col-lg-8">
+                                                    <div class="col-lg-8 col-md-6 col-sm-4 mb-2">
                                                       <select id="inputState" class="form-select round">
                                                         <option selected>Status Change</option>
                                                         <option>Visited</option>
@@ -598,7 +673,7 @@
                                                         <option>Liked</option>
                                                       </select>
                                                     </div>
-                                                    <div class="col-lg-4">
+                                                    <div class="col-lg-4 col-md-6 col-sm-4">
                                                       <button type="submit" class="btn btn-primary">Update</button>
                                                     </div>
                                                   </div>
@@ -633,7 +708,7 @@
                                                 </h6> 
                                                 <div class="card-footer">
                                                   <div class="row">
-                                                    <div class="col-lg-8">
+                                                    <div class="col-lg-8 col-md-6 col-sm-4 mb-2">
                                                       <select id="inputState" class="form-select round">
                                                         <option selected>Status Change</option>
                                                         <option>Visited</option>
@@ -641,7 +716,7 @@
                                                         <option>Liked</option>
                                                       </select>
                                                     </div>
-                                                    <div class="col-lg-4">
+                                                    <div class="col-lg-4 col-md-6 col-sm-4">
                                                       <button type="submit" class="btn btn-primary">Update</button>
                                                     </div>
                                                   </div>
