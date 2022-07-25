@@ -541,16 +541,8 @@
 
                                             <div class="card-footer">
                                               <div class="row">
-                                                <div class="col-lg-8 col-md-6 col-sm-4 mb-2">
-                                                  <select id="inputState" class="form-select round">
-                                                    <option selected>Status Change</option>
-                                                    <option>Visited</option>
-                                                    <option>Wating</option>
-                                                    <option>Liked</option>
-                                                  </select>
-                                                </div>
-                                                <div class="col-lg-4 col-md-6 col-sm-4">
-                                                  <button type="submit" class="btn btn-primary">Update</button>
+                                                <div class="col-lg-12 col-md-6 col-sm-4 mb-2 text-end">
+                                                  <i class="ri ri-draft-fill" data-bs-toggle="modal" data-bs-target="#NoteModal"> Add Note</i>
                                                 </div>
                                               </div>
                                               
@@ -559,7 +551,7 @@
                                     </div> 
                                 </div>
                             </div>
-                        </div>
+                         </div>
                         </div><!-- End Sales Card -->
     
                         <div class="col-xxl-6 col-md-6">
@@ -635,7 +627,65 @@
                                      </div>
                                      </div>
                                  </div><!-- End Small Modal-->
-                                
+
+                                 <!-- add note Modal -->
+                                  
+                                  <div class="modal fade" id="NoteModal" tabindex="-1">
+                                    <div class="modal-dialog">
+                                      <div class="modal-content">
+                                        <div class="modal-header">
+                                          <h5 class="modal-title">Add Your Note</h5>
+                                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                          <form>
+                                            <div class="row mb-3">
+                                              <label class="col-sm-3 col-form-label">Property</label>
+                                              <div class="col-sm-9">
+                                                <select class="form-select" aria-label="Default select example">
+                                                  <option selected>select... </option>
+                                                  <option value="1">Flat</option>
+                                                  <option value="2">Villa</option>
+                                                </select>
+                                              </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                              <label for="inputText" class="col-sm-3 col-form-label">Place</label>
+                                              <div class="col-sm-9">
+                                                <input type="text" class="form-control">
+                                              </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                              <label for="inputText" class="col-sm-3 col-form-label">Value</label>
+                                              <div class="col-sm-9">
+                                                <input type="text" class="form-control">
+                                              </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                              <label for="inputDate" class="col-sm-3 col-form-label">Date</label>
+                                              <div class="col-sm-9">
+                                                <input type="date" class="form-control">
+                                              </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                              <label class="col-sm-3 col-form-label">Status</label>
+                                              <div class="col-sm-9">
+                                                <select class="form-select" aria-label="Default select example">
+                                                  <option selected>select... </option>
+                                                  <option value="1">Liked</option>
+                                                  <option value="2">Waiting</option>
+                                                </select>
+                                              </div>
+                                            </div>
+                                          </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                          <button type="submit" class="btn btn-success">ADD</button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div><!-- End note Modal-->
+                                                    
                               </div>
               
                             </div>
@@ -665,16 +715,8 @@
                                                 </h6> 
                                                 <div class="card-footer">
                                                   <div class="row">
-                                                    <div class="col-lg-8 col-md-6 col-sm-4 mb-2">
-                                                      <select id="inputState" class="form-select round">
-                                                        <option selected>Status Change</option>
-                                                        <option>Visited</option>
-                                                        <option>Wating</option>
-                                                        <option>Liked</option>
-                                                      </select>
-                                                    </div>
-                                                    <div class="col-lg-4 col-md-6 col-sm-4">
-                                                      <button type="submit" class="btn btn-primary">Update</button>
+                                                    <div class="col-lg-12 col-md-6 col-sm-4 mb-2 text-end">
+                                                      <i class="ri ri-draft-fill" data-bs-toggle="modal" data-bs-target="#NoteModal"> Add Note</i>
                                                     </div>
                                                   </div>
                                                   
@@ -708,18 +750,11 @@
                                                 </h6> 
                                                 <div class="card-footer">
                                                   <div class="row">
-                                                    <div class="col-lg-8 col-md-6 col-sm-4 mb-2">
-                                                      <select id="inputState" class="form-select round">
-                                                        <option selected>Status Change</option>
-                                                        <option>Visited</option>
-                                                        <option>Wating</option>
-                                                        <option>Liked</option>
-                                                      </select>
-                                                    </div>
-                                                    <div class="col-lg-4 col-md-6 col-sm-4">
-                                                      <button type="submit" class="btn btn-primary">Update</button>
+                                                    <div class="col-lg-12 col-md-6 col-sm-4 mb-2 text-end">
+                                                      <i class="ri ri-draft-fill" data-bs-toggle="modal" data-bs-target="#NoteModal"> Add Note</i>
                                                     </div>
                                                   </div>
+                                                  
                                                 </div>
                                             </div>
                                         </div> 
